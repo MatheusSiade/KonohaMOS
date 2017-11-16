@@ -1,0 +1,30 @@
+<h1>Hello, Rails</h1>
+<%=link_to 'New mission', new_mission_path%>
+
+<h1>Listing missions</h1>
+
+<table>
+  <tr>
+    <td>Title</td>
+    <td>Local</td>
+    <td>Challenger Label</td>
+    <td>Team</td>
+    <td>Creator</td>
+    <td>Comments</td>
+    <td>Price</td>
+
+  </tr>
+
+  <% @mission.each do |mission| %>
+    <tr>
+      <td><%=mission.title%></mission.title></td>
+      <td><%=mission.local%> </td>
+      <td><%=mission.challenge_label%></td>
+      <td><%=mission.team%></td>
+      <td><%=mission.creator%></td>
+      <td><%=mission.comments%></td>
+      <td><%=mission.price%></td>
+      <td><%= link_to 'Show',mission_path(mission)%></td>
+    </tr>
+  <%end%>
+</table>
