@@ -1,0 +1,56 @@
+<%= form_with model: @mission, local: true do |form| %>
+
+    <% if @mission.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@mission.errors.count, "error") %> prohibited
+            this mission from being saved:
+          </h2>
+          <ul>
+            <% @mission.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :local %><br>
+      <%= form.text_field :local %>
+    </p>
+
+    <p>
+      <%= form.label :challenge_level %><br>
+      <%= form.text_field :challenge_level %>
+    </p>
+
+    <p>
+      <%= form.label :team %><br>
+      <%= form.text_field :team %>
+    </p>
+
+    <p>
+      <%= form.label :creator %><br>
+      <%= form.text_field :creator %>
+    </p>
+
+    <p>
+      <%= form.label :comments %><br>
+      <%= form.text_area :comments %>
+    </p>
+
+    <p>
+      <%= form.label :price %><br>
+      <%= form.text_field :price %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+
+<% end %>

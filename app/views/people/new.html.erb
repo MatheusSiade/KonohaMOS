@@ -1,0 +1,47 @@
+<h1>New Person</h1>
+
+<%= form_with scope: :person, local: true do |form| %>
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :id %><br>
+      <%= form.text_area :user_id %>
+    </p>
+
+    <p>
+      <%= form.label :birth_date %><br>
+      <%= form.text_area :birth_date %>
+    </p>
+
+    <p>
+      <%= form.label :home_address %><br>
+      <%= form.text_area :home_address %>
+    </p>
+
+    <p>
+      <%= form.label :ninja_rank %><br>
+      <%= form.text_area :ninja_rank %>
+    </p>
+
+    <p>
+      <%= form.label :username %><br>
+      <%= form.text_area :username %>
+    </p>
+
+    <p>
+      <%= form.label :user_type %><br>
+      <%= form.text_area :user_type %>
+    </p>
+
+    <p>
+      <%= form.label :email %><br>
+      <%= form.text_area :email %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>
