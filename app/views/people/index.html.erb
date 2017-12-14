@@ -1,0 +1,18 @@
+<h1>Listing people</h1>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>User Id</td>
+
+  </tr>
+
+  <% @person.each do |person| %>
+      <tr>
+        <td><%=person.name%></mission.title></td>
+        <td><%=person.user_id%></td>
+      </tr>
+  <%end%>
+</table>
+
+<%= link_to 'New person',new_person_path %>
