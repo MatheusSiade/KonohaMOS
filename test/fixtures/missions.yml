@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  local: MyString
+  challenge_label: 
+  team: 
+  creator: MyString
+  comments: MyText
+  price: 
+
+two:
+  title: MyString
+  local: MyString
+  challenge_label: 
+  team: 
+  creator: MyString
+  comments: MyText
+  price: 
