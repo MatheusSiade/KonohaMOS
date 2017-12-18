@@ -3,6 +3,7 @@ class PeopleController < ApplicationController
   def index
     @person= Person.all
   end
+
   def show
       @person = Person.find(params[:id])
   end
@@ -11,10 +12,34 @@ class PeopleController < ApplicationController
     @person = Person.new
   end
 
+  def edit
+    @person = Person.find(params[:id])
+  end
+
   def create
     @person = Person.new(person_params)
-    @person.save
-    redirect_to @person
+    if @person.save
+      redirect_to @person
+    else
+      render 'new'
+    end
+
+  end
+
+  def update
+    @person = Person.find(person_params)
+    if @person.update(person_params)
+      redirect_to @person
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @person = Person.find(params[:id])
+    @person.destroy
+
+    redirect_to people_path
   end
 
   private

@@ -1,0 +1,60 @@
+<%= form_with model: @person, local: true do |form| %>
+
+    <% if @person.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@person.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @person.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :id %><br>
+      <%= form.text_area :user_id %>
+    </p>
+
+    <p>
+      <%= form.label :birth_date %><br>
+      <%= form.text_area :birth_date %>
+    </p>
+
+    <p>
+      <%= form.label :home_address %><br>
+      <%= form.text_area :home_address %>
+    </p>
+
+    <p>
+      <%= form.label :ninja_rank %><br>
+      <%= form.text_area :ninja_rank %>
+    </p>
+
+    <p>
+      <%= form.label :username %><br>
+      <%= form.text_area :username %>
+    </p>
+
+    <p>
+      <%= form.label :user_type %><br>
+      <%= form.text_area :user_type %>
+    </p>
+
+    <p>
+      <%= form.label :email %><br>
+      <%= form.text_area :email %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>

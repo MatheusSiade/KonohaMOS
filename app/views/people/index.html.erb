@@ -12,8 +12,13 @@
       <tr>
         <td><%=person.name%></mission.title></td>
         <td><%=person.user_id%></td>
+        <td><%= link_to 'show',person_path(person) %></td>
+        <td><%= link_to 'edit',edit_person_path(person) %> </td>
+        <td><%= link_to 'destroy',person_path(person),
+                method: :delete,
+                data: { confirm: 'Are you sure?'} %> </td>
+
       </tr>
   <%end%>
 </table>
-
 <%= link_to 'New person',new_person_path %>
