@@ -13,44 +13,58 @@
           </ul>
         </div>
     <% end %>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :title, autofocus: true, :required => true, :class => 'validate' %>
+        <label for="title" class="active" data-error data-success>Title </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :local, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="local" class="active" data-error data-success>Local </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :local %><br>
-      <%= form.text_field :local %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :challenge_label, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="challenge_label" class="active" data-error data-success>Challenge Level </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :challenge_level %><br>
-      <%= form.text_field :challenge_label %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :team, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="team" class="active" data-error data-success>Team </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :team %><br>
-      <%= form.text_field :team %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :creator, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="creator" class="active" data-error data-success>Creator </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :creator %><br>
-      <%= form.text_field :creator %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :comments, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="comments" class="active" data-error data-success>Comments </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :comments %><br>
-      <%= form.text_area :comments %>
-    </p>
-
-    <p>
-      <%= form.label :price %><br>
-      <%= form.text_field :price %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :price, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="price" class="active" data-error data-success>price </label>
+      </div>
+    </div>
 
     <p>
       <%= form.submit %>
     </p>
 
 <% end %>
+

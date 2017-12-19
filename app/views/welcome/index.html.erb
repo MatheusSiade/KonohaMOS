@@ -1,5 +1,17 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="teams.html">Teams</a></li>
+
+    </ul>
+  </div>
+</nav>
+
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -9,6 +21,4 @@
 
 <h1>Welcome</h1>
 
-<%= link_to 'My Missions', controller: 'missions' %>
-<%= link_to 'People', controller: 'people' %>
-<%= link_to 'Teams', controller: 'teams' %>
+

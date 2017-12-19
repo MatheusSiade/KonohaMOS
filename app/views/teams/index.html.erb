@@ -1,5 +1,19 @@
+<nav>
+  <div class="nav-wrapper">
+    <ul class="left hide-on-med-and-down">
+      <li><a href=/# >back</a></li>
+    </ul>
+    <a href="#" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="missions.html">Missions</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="teams.html">Teams</a></li>
+
+    </ul>
+  </div>
+</nav>
+
 <h1>Listing teams</h1>
-<%=link_to 'Back', root_path%>
 
 <table>
   <tr>
@@ -18,4 +32,4 @@
       </tr>
   <%end%>
 </table>
-<%= link_to 'New team',new_team_path %>
+<a class="waves-effect waves-light btn" href="teams/new.html">New team</a>
