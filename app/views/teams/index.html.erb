@@ -1,0 +1,21 @@
+<h1>Listing teams</h1>
+<%=link_to 'Back', root_path%>
+
+<table>
+  <tr>
+    <td>Name</td>
+  </tr>
+
+  <% @team.each do |team| %>
+      <tr>
+        <td><%=team.name%></mission.title></td>
+        <td><%= link_to 'show',team_path(team) %></td>
+        <td><%= link_to 'edit',edit_team_path(team) %> </td>
+        <td><%= link_to 'destroy',team_path(team),
+                method: :delete,
+                data: { confirm: 'Are you sure?'} %> </td>
+
+      </tr>
+  <%end%>
+</table>
+<%= link_to 'New team',new_team_path %>
