@@ -14,45 +14,61 @@
         </div>
     <% end %>
 
-    <p>
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :name, autofocus: true, :required => true, :class => 'validate' %>
+        <label for="name" class="active" data-error data-success>Name </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :id %><br>
-      <%= form.text_area :user_id %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :user_id, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="id" class="active" data-error data-success>ID </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :birth_date %><br>
-      <%= form.text_area :birth_date %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :birth_date, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="birth_date" class="active" data-error data-success>Birth Date </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :home_address %><br>
-      <%= form.text_area :home_address %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :home_address, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="home_address" class="active" data-error data-success>Home Adress </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :ninja_rank %><br>
-      <%= form.text_area :ninja_rank %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :ninja_rank, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="ninja_rank" class="active" data-error data-success>Ninja Rank </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :username %><br>
-      <%= form.text_area :username %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :username, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="username" class="active" data-error data-success>Username </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :user_type %><br>
-      <%= form.text_area :user_type %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :user_type, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="user_type" class="active" data-error data-success>User Type </label>
+      </div>
+    </div>
 
-    <p>
-      <%= form.label :email %><br>
-      <%= form.text_area :email %>
-    </p>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <%= form.text_field :email, autofocus: false, :required => true, :class => 'validate' %>
+        <label for="email" class="active" data-error data-success>Email </label>
+      </div>
+    </div>
 
     <p>
       <%= form.submit %>

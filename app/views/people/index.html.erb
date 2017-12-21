@@ -12,26 +12,36 @@
     </ul>
   </div>
 </nav>
-<h1>Listing people</h1>
 
-<table>
-  <tr>
-    <td>Name</td>
-    <td>User Id</td>
-
-  </tr>
-
-  <% @person.each do |person| %>
+<body>
+<div class="container">
+  <h1>Ninjas</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%=person.name%></mission.title></td>
-        <td><%=person.user_id%></td>
-        <td><%= link_to 'show',person_path(person) %></td>
-        <td><%= link_to 'edit',edit_person_path(person) %> </td>
-        <td><%= link_to 'destroy',person_path(person),
-                method: :delete,
-                data: { confirm: 'Are you sure?'} %> </td>
-
+        <th>Name</th>
+        <th>User Id</th>
       </tr>
-  <%end%>
+    </thead>
+
+    <% @person.each do |person| %>
+        <tbody>
+          <tr>
+            <td><%=person.name%></mission.title></td>
+            <td><%=person.user_id%></td>
+            <td><a class="waves-effect waves-light btn" href = "/people/<%=person.id%>"> Show </a></td>
+            <td><a class="waves-effect waves-light btn" href = "/people/<%=person.id%>/edit"> Edit </a></td>
+
+            <td><%= link_to 'destroy',person_path(person),
+                            method: :delete,
+                            data: { confirm: 'Are you sure?'} %> </td>
+          </tr>
+        </tbody>
+    <%end%>
 </table>
-<a class="waves-effect waves-light btn" href="people/new.html">New person</a>
+  <a class="waves-effect waves-light btn" href="people/new.html">New person</a>
+
+</div>
+</body>
+
+

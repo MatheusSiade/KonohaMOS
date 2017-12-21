@@ -1,37 +1,55 @@
+<body>
+<div class="container">
+  <ul class="collection">
+    <li class="collection-item">
+    <p>
+      <strong>Name:</strong>
+      <%= @person.name %>
+     </p>
+    </li>
 
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
+    <li class="collection-item">
+      <p>
+        <strong>Id:</strong>
+        <%= @person.user_id %>
+      </p>
+    </li>
 
-<p>
-  <strong>Id:</strong>
-  <%= @person.user_id %>
-</p>
+    <li class="collection-item">
+      <p>
+        <strong>Birth date:</strong>
+        <%= @person.birth_date %>
+      </p>
+    </li>
 
-<p>
-  <strong>Birth date:</strong>
-  <%= @person.birth_date %>
-</p>
+    <li class="collection-item">
+      <p>
+      <strong>Home address:</strong>
+      <%= @person.home_address %>
+      </p>
+    </li>
 
-<p>
-  <strong>Home address:</strong>
-  <%= @person.home_address %>
-</p>
+    <li class="collection-item">
+      <p>
+        <strong>Ninja rank:</strong>
+        <%= @person.ninja_rank %>
+      </p>
+    </li>
 
-<p>
-  <strong>Ninja rank:</strong>
-  <%= @person.ninja_rank %>
-</p>
+    <li class="collection-item">
+      <p>
+        <strong>username:</strong>
+        <%= @person.username %>
+      </p>
+    </li>
+    <li class="collection-item">
+      <p>
+      <strong>email:</strong>
+      <%= @person.email %>
+      </p>
+    </li>
 
-<p>
-  <strong>username:</strong>
-  <%= @person.username %>
-</p>
-
-<p>
-  <strong>email:</strong>
-  <%= @person.email %>
-</p>
-
-<%= link_to 'Voltar', people_path %>
+  </ul>
+  <a class="waves-effect waves-light btn" href="/people.html">Back</a>
+</div>
+</body>

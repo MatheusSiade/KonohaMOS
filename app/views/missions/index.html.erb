@@ -13,25 +13,32 @@
   </div>
 </nav>
 
+<body>
+<div class="container">
+  <h1>Missions</h1>
 
-<h1>Listing missions</h1>
-
-<table>
-  <tr>
-    <td>Title</td>
-    <td>Team</td>
-
-  </tr>
-
-  <% @mission.each do |mission| %>
+  <table>
+    <thead>
     <tr>
-      <td><%=mission.title%></mission.title></td>
-      <td><%=mission.team%></td>
-      <td><%= link_to 'Show', mission_path(mission) %></td>
-      <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-      <td><%= link_to 'Destroy', mission_path(mission), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      <th>Title</th>
+      <th>Teams</th>
     </tr>
-  <%end%>
-</table>
-<a class="waves-effect waves-light btn" href="missions/new">New mission</a>
+    </thead>
+
+    <% @mission.each do |mission| %>
+        <tbody>
+        <tr>
+          <td><%=mission.title%></mission.title></td>
+          <td><%=mission.team%></td>
+          <td><%= link_to 'show', mission_path(mission) %></td>
+          <td><%= link_to 'edit', edit_mission_path(mission) %></td>
+          <td><%= link_to 'destroy', mission_path(mission), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+        </tbody>
+    <%end%>
+  </table>
+  <a class="waves-effect waves-light btn" href="missions/new">New mission</a>
+
+</div>
+</body>
 

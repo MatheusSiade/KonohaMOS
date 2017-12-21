@@ -1,38 +1,42 @@
-
-<p>
+<body>
+<div class="container">
+  <p>
   <strong>Title:</strong>
   <%= @mission.title %>
 </p>
 
-<p>
-  <strong>Local:</strong>
-  <%= @mission.local %>
-</p>
+  <p>
+    <strong>Local:</strong>
+    <%= @mission.local %>
+  </p>
 
-<p>
-  <strong>Challenge Level:</strong>
-  <%= @mission.challenge_label %>
-</p>
+  <p>
+    <strong>Challenge Level:</strong>
+    <%= @mission.challenge_label %>
+  </p>
 
-<p>
-  <strong>Team:</strong>
-  <%= @mission.team %>
-</p>
+  <p>
+    <strong>Team:</strong>
+    <%= @mission.team %>
+  </p>
 
-<p>
-  <strong>Creator:</strong>
-  <%= @mission.creator %>
-</p>
+  <p>
+    <strong>Creator:</strong>
+    <%= @mission.creator %>
+  </p>
 
-<p>
-  <strong>Commments:</strong>
-  <%= @mission.comments %>
-</p>
+  <p>
+    <strong>Commments:</strong>
+    <%= @mission.comments %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @mission.price %>
-</p>
-<%= link_to 'Edit', edit_mission_path(@mission) %> |
-<%= link_to 'Back', missions_path %>
+  <p>
+    <strong>Price:</strong>
+    <%= @mission.price %>
+  </p>
+  <%= link_to 'Edit', edit_mission_path(@mission) %> |
+  <%= link_to 'Back', missions_path %>
+</div>
+</body>
+
 
