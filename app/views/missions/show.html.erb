@@ -1,42 +1,61 @@
 <body>
 <div class="container">
-  <p>
+  <ul class="collection">
+  <li class="collection-item">
+    <p>
   <strong>Title:</strong>
   <%= @mission.title %>
-</p>
+  </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Local:</strong>
     <%= @mission.local %>
   </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Challenge Level:</strong>
     <%= @mission.challenge_label %>
   </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Team:</strong>
     <%= @mission.team %>
   </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Creator:</strong>
     <%= @mission.creator %>
   </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Commments:</strong>
     <%= @mission.comments %>
   </p>
+    </li>
 
-  <p>
+  <li class="collection-item">
+    <p>
     <strong>Price:</strong>
     <%= @mission.price %>
   </p>
-  <%= link_to 'Edit', edit_mission_path(@mission) %> |
-  <%= link_to 'Back', missions_path %>
+  </li>
+  </ul>
+  <a class="waves-effect waves-light btn" href="edit">Edit</a>
+  <a class="waves-effect waves-light btn" href="/missions">Back</a>
+
+        
 </div>
+
 </body>
 
 

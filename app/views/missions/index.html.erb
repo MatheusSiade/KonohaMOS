@@ -30,9 +30,9 @@
         <tr>
           <td><%=mission.title%></mission.title></td>
           <td><%=mission.team%></td>
-          <td><%= link_to 'show', mission_path(mission) %></td>
-          <td><%= link_to 'edit', edit_mission_path(mission) %></td>
-          <td><%= link_to 'destroy', mission_path(mission), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <td><a class="waves-effect waves-light btn" href = "/missions/<%=mission.id%>"> Show </a></td>
+          <td><a class="waves-effect waves-light btn" href = "/missions/<%=mission.id%>/edit"> Edit </a></td>
+          <td><%= button_to 'destroy', mission_path(mission), method: :delete, data: {confirm: 'Are you sure?'} %></td>
         </tr>
         </tbody>
     <%end%>
