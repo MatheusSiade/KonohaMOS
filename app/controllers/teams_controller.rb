@@ -43,7 +43,7 @@ class TeamsController < ApplicationController
 
   private
   def team_params
-    params.require(:team).permit(:name,:person1_id,:person2_id,:person3_id,:personsuperior_id)
+    params.require(:team).permit(:person1_id,:person2_id,:person3_id,:personsuperior_id)
   end
 
 end
