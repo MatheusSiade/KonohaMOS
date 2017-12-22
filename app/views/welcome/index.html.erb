@@ -5,9 +5,18 @@
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <h3>Welcome</h3>
 <% end %>
 
-<h1>Welcome</h1>
+<% if current_user != nil %>
+<% if current_user.hokage? %>
+  <h3>Welcome Hokage</h3>
+<% elsif current_user.ninja? %>
+  <h3>Welcome, Ninja</h3>
+<% else %>
+  <h3>Welcome</h3>
+<% end %>
+<% end %>
 
 <%= link_to 'My Missions', controller: 'missions' %>
 <%= link_to 'People', controller: 'people' %>
