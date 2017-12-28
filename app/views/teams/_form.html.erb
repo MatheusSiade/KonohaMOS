@@ -15,28 +15,28 @@
     <% end %>
 
     <p>
-      <%= form.label :Name %><br>
+      <%= form.label :name %><br>
       <%= form.text_field :name %>
     </p>
 
     <p>
       <%= form.label :Ninja  %><br>
-      <%= form.text_area :person1_id%>
+      <%= form.select :person1_id, options_for_select(@people.map{|p| [p.name, p.id]})%>
     </p>
 
     <p>
       <%= form.label :Ninja %><br>
-      <%= form.text_area :person2_id%>
+      <%= form.select :person2_id, options_for_select(@people.map{|p| [p.name, p.id]})%>
     </p>
 
     <p>
       <%= form.label :Ninja %><br>
-      <%= form.text_area :person3_id %>
+      <%= form.select :person3_id, options_for_select(@people.map{|p| [p.name, p.id]})%>
     </p>
 
     <p>
       <%= form.label :Ninja_Superior %><br>
-      <%= form.text_area :personsuperior_id %>
+      <%= form.select :personsuperior_id, options_for_select(@chuninmais.map{|p| [p.name, p.id]})%>
     </p>
 
     <p>

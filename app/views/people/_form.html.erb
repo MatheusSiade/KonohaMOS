@@ -1,60 +1,34 @@
-<%= form_with model: @person, local: true do |form| %>
+isso é pro select funcionar com materialize <%= form_with model: @person, local: true do |form| %> <% if @person.errors.any? %>
+        <%= pluralize(@person.errors.count, "error") %> prohibited this article from being saved:
 
-    <% if @person.errors.any? %>
-        <div id="error_explanation">
-          <h2>
-            <%= pluralize(@person.errors.count, "error") %> prohibited
-            this article from being saved:
-          </h2>
-          <ul>
-            <% @person.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
+        <% @person.errors.full_messages.each do |msg| %>
+            <%= msg %>
+        <% end %>
     <% end %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
 
-    <p>
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
-    </p>
+    <%= form.label :user_id %>
+    <%= form.text_area :user_id %>
 
-    <p>
-      <%= form.label :id %><br>
-      <%= form.text_area :user_id %>
-    </p>
+    <%= form.label :birth_date %>
+    <%= form.text_area :birth_date %>
 
-    <p>
-      <%= form.label :birth_date %><br>
-      <%= form.text_area :birth_date %>
-    </p>
+    <%= form.label :home_address %>
+    <%= form.text_area :home_address %>
 
-    <p>
-      <%= form.label :home_address %><br>
-      <%= form.text_area :home_address %>
-    </p>
+    <%= form.label :ninja_rank %>
+    <%= form.select :ninja_rank, @ranks %>
 
-    <p>
-      <%= form.label :ninja_rank %><br>
-      <%= form.text_area :ninja_rank %>
-    </p>
+    <%= form.label :username %>
+    <%= form.text_area :username %>
 
-    <p>
-      <%= form.label :username %><br>
-      <%= form.text_area :username %>
-    </p>
+    <%= form.label :user_type %>
+    <%= form.text_area :user_type %>
 
-    <p>
-      <%= form.label :user_type %><br>
-      <%= form.text_area :user_type %>
-    </p>
+    <%= form.label :email %>
+    <%= form.text_area :email %>
 
-    <p>
-      <%= form.label :email %><br>
-      <%= form.text_area :email %>
-    </p>
+    <%= form.submit %>
 
-    <p>
-      <%= form.submit %>
-    </p>
 <% end %>

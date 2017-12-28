@@ -5,11 +5,12 @@ class PeopleController < ApplicationController
   end
 
   def show
-      @person = Person.find(params[:id])
+    @person = Person.find(params[:id])
   end
 
   def new
     @person = Person.new
+    @ranks = ['Genin', 'Chunin', 'Jounin', 'Hokage'] #Arruma os nomes que estão faltando, tem uma forma mais elegante, mas por enquanto isso serve bem
   end
 
   def edit
@@ -18,6 +19,7 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.new(person_params)
+    @ranks = ['Genin', 'Chunin', 'Jounin', 'Hokage']
     if @person.save
       redirect_to @person
     else
@@ -43,8 +45,8 @@ class PeopleController < ApplicationController
   end
 
   private
-    def person_params
-        params.require(:person).permit(:name,:user_id,:birth_date,:home_address,:ninja_rank,:username,:user_type,:email)
-    end
+  def person_params
+    params.require(:person).permit(:name,:user_id,:birth_date,:home_address,:ninja_rank,:username,:user_type,:email)
+  end
 
 end
